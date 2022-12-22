@@ -8,7 +8,7 @@ repos:
       - id: check-merge-conflict
       - id: check-symlinks
       - id: check-yaml
-      # - id: end-of-file-fixer
+      - id: end-of-file-fixer
       - id: mixed-line-ending
       - id: trailing-whitespace
   - repo: https://github.com/psf/black
@@ -28,13 +28,13 @@ repos:
         language: rust
         files: \.rs$
         args: []
-      # - id: cargo-deny
-      #   name: cargo deny check
-      #   description: Check cargo dependencies
-      #   entry: bash -c 'cargo deny check'
-      #   language: rust
-      #   files: \.rs$
-      #   args: []
+      - id: cargo-deny
+        name: cargo deny check
+        description: Check cargo dependencies
+        entry: bash -c 'cargo deny check'
+        language: rust
+        files: \.rs$
+        args: []
       - id: cargo-check
         name: cargo check
         description: Check the package for errors.
